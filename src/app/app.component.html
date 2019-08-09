@@ -1,0 +1,14 @@
+<app-data-table [tableHeader]="tableHeader"
+                [tableBody]="classDetails"
+                (objClicked)="getClassInfo($event)">
+</app-data-table>
+
+<ng-container *ngIf="stTableBody.length > 0">
+  <br/>
+  <div>
+    Selected Class: {{selCls.className}}
+  </div>
+  <app-data-table [tableHeader]="stTableHeader"
+                  [tableBody]="stTableBody">
+  </app-data-table>
+</ng-container>

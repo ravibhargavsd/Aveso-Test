@@ -1,0 +1,23 @@
+<table border="1">
+	<thead>
+		<tr>
+			<th *ngFor="let tdata of tableHeader">
+				{{tdata.title}}
+			</th>
+		</tr>
+	</thead>
+	<tbody align="center">
+		<tr *ngFor="let tdata of tableBody">
+			<td *ngFor="let key of tableHeader">
+				<ng-container *ngIf="key.clickable; else newLabel" >
+					<span class="cp" (click)="emitObject(tdata)">
+						{{tdata[key.label]}}
+					</span>
+				</ng-container>
+				<ng-template #newLabel>
+					{{tdata[key.label]}}
+				</ng-template>
+			</td>
+		</tr>
+	</tbody>
+</table>
