@@ -3,6 +3,7 @@
 		<tr>
 			<th *ngFor="let tdata of tableHeader">
 				{{tdata.title}}
+				<span (click)="sortData(tdata)"> &nbsp; sort</span>
 			</th>
 		</tr>
 	</thead>

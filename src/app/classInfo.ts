@@ -1,22 +1,27 @@
 export interface classObj {
 	title: string,
 	label: string,
-	clickable?: boolean
+	clickable?: boolean,
+	sorting?: string
 }
 
 export const classHeader: classObj[] = [{
 	title: "Class",
 	label: "className",
-	clickable: true
+	clickable: true,
+	sorting: 'asc'
 }, {
 	title: "Students",
-	label: "total"
+	label: "total",
+	sorting: 'asc'
 }, {
 	title: "Pass",
-	label: "pass"
+	label: "pass",
+	sorting: 'asc'
 }, {
 	title: "Fail",
-	label: "fail"
+	label: "fail",
+	sorting: 'asc'
 }];
 
 export const studentHeader:classObj[] = [{
